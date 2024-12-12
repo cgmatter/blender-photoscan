@@ -1,0 +1,118 @@
+19:14:25 [App     ] OpenMVS x64 v2.3.0
+19:14:25 [App     ] Build date: Jan  7 2024, 05:18:42
+19:14:25 [App     ] CPU: AMD Ryzen 7 5700X 8-Core Processor              (16 cores)
+19:14:25 [App     ] RAM: 31.92GB Physical Memory 128.00TB Virtual Memory
+19:14:25 [App     ] OS: Windows 8 x64
+19:14:25 [App     ] Disk: 137.37GB (476.07GB) space
+19:14:25 [App     ] SSE & AVX compatible CPU & OS detected
+19:14:25 [App     ] Command line: DensifyPointCloud
+19:14:25 [App     ] Available options:
+
+Generic options:
+  -h [ --help ]                         produce this help message
+  -w [ --working-folder ] arg           working directory (default current 
+                                        directory)
+  -c [ --config-file ] arg (=DensifyPointCloud.cfg)
+                                        file name containing program options
+  --archive-type arg (=-1)              project archive type: -1-interface, 
+                                        0-text, 1-binary, 2-compressed binary
+  --process-priority arg (=-1)          process priority (below normal by 
+                                        default)
+  --max-threads arg (=0)                maximum number of threads (0 for using 
+                                        all available cores)
+  -v [ --verbosity ] arg (=2)           verbosity level
+  --cuda-device arg (=-1)               CUDA device number to be used for 
+                                        depth-map estimation (-2 - CPU 
+                                        processing, -1 - best GPU, >=0 - device
+                                        index)
+
+Densify options:
+  -i [ --input-file ] arg               input filename containing camera poses 
+                                        and image list
+  -p [ --pointcloud-file ] arg          sparse point-cloud with views file name
+                                        to densify (overwrite existing 
+                                        point-cloud)
+  -o [ --output-file ] arg              output filename for storing the dense 
+                                        point-cloud (optional)
+  --view-neighbors-file arg             input filename containing the list of 
+                                        views and their neighbors (optional)
+  --output-view-neighbors-file arg      output filename containing the 
+                                        generated list of views and their 
+                                        neighbors
+  --resolution-level arg (=1)           how many times to scale down the images
+                                        before point cloud computation
+  --max-resolution arg (=2560)          do not scale images higher than this 
+                                        resolution
+  --min-resolution arg (=640)           do not scale images lower than this 
+                                        resolution
+  --sub-resolution-levels arg (=2)      number of patch-match sub-resolution 
+                                        iterations (0 - disabled)
+  --number-views arg (=8)               number of views used for depth-map 
+                                        estimation (0 - all neighbor views 
+                                        available)
+  --number-views-fuse arg (=3)          minimum number of images that agrees 
+                                        with an estimate during fusion in order
+                                        to consider it inlier (<2 - only merge 
+                                        depth-maps)
+  --ignore-mask-label arg (=-1)         label value to ignore in the image 
+                                        mask, stored in the MVS scene or next 
+                                        to each image with '.mask.png' 
+                                        extension (<0 - disabled)
+  --mask-path arg                       path to folder containing mask images 
+                                        with '.mask.png' extension
+  --iters arg (=4)                      number of patch-match iterations
+  --geometric-iters arg (=2)            number of geometric consistent 
+                                        patch-match iterations (0 - disabled)
+  --estimate-colors arg (=2)            estimate the colors for the dense 
+                                        point-cloud (0 - disabled, 1 - final, 2
+                                        - estimate)
+  --estimate-normals arg (=2)           estimate the normals for the dense 
+                                        point-cloud (0 - disabled, 1 - final, 2
+                                        - estimate)
+  --estimate-scale arg (=0)             estimate the point-scale for the dense 
+                                        point-cloud (scale multiplier, 0 - 
+                                        disabled)
+  --sub-scene-area arg (=0)             split the scene in sub-scenes such that
+                                        each sub-scene surface does not exceed 
+                                        the given maximum sampling area (0 - 
+                                        disabled)
+  --sample-mesh arg (=0)                uniformly samples points on a mesh (0 -
+                                        disabled, <0 - number of points, >0 - 
+                                        sample density per square unit)
+  --fusion-mode arg (=0)                depth-maps fusion mode (-2 - fuse 
+                                        disparity-maps, -1 - export 
+                                        disparity-maps only, 0 - depth-maps & 
+                                        fusion, 1 - export depth-maps only)
+  --postprocess-dmaps arg (=7)          flags used to filter the depth-maps 
+                                        after estimation (0 - disabled, 1 - 
+                                        remove-speckles, 2 - fill-gaps, 4 - 
+                                        adjust-filter)
+  --filter-point-cloud arg (=0)         filter dense point-cloud based on 
+                                        visibility (0 - disabled)
+  --export-number-views arg (=0)        export points with >= number of views 
+                                        (0 - disabled, <0 - save MVS project 
+                                        too)
+  --roi-border arg (=0)                 add a border to the region-of-interest 
+                                        when cropping the scene (0 - disabled, 
+                                        >0 - percentage, <0 - absolute)
+  --estimate-roi arg (=2)               estimate and set region-of-interest (0 
+                                        - disabled, 1 - enabled, 2 - adaptive)
+  --crop-to-roi arg (=1)                crop scene using the region-of-interest
+  --remove-dmaps arg (=0)               remove depth-maps after fusion
+  --tower-mode arg (=4)                 add a cylinder of points in the center 
+                                        of ROI; scene assume to be Z-up 
+                                        oriented (0 - disabled, 1 - replace, 2 
+                                        - append, 3 - select neighbors, 4 - 
+                                        select neighbors & append, <0 - force 
+                                        tower mode)
+19:14:25 [App     ] MEMORYINFO: {
+19:14:25 [App     ] 	PageFaultCount 2672
+19:14:25 [App     ] 	PeakWorkingSetSize 9.96MB
+19:14:25 [App     ] 	WorkingSetSize 9.96MB
+19:14:25 [App     ] 	QuotaPeakPagedPoolUsage 170.85KB
+19:14:25 [App     ] 	QuotaPagedPoolUsage 170.68KB
+19:14:25 [App     ] 	QuotaPeakNonPagedPoolUsage 14.47KB
+19:14:25 [App     ] 	QuotaNonPagedPoolUsage 14.34KB
+19:14:25 [App     ] 	PagefileUsage 3.16MB
+19:14:25 [App     ] 	PeakPagefileUsage 3.16MB
+19:14:25 [App     ] } ENDINFO

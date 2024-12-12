@@ -1,0 +1,12 @@
+schema_version = "1.0.0"
+id = "photoscan"
+version = "1.0.0"
+name = "Photoscan"
+tagline = "Photoscans a image data-set right in blender."
+maintainer = "CGMatter"
+type = "add-on"
+tags = ["3D View"]
+blender_version_min = "4.3.0"
+license = [
+"SPDX:GPL-2.0-or-later",
+]
