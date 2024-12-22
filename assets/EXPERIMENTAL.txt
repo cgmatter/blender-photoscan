@@ -1,0 +1,4 @@
+This version of Photoscan is still in the experimental phase!!!
+It includes the new vertex color feature (works on the dense mesh).
+
+Feel free to use but there may be bugs! (version 1 is considered the stable version)

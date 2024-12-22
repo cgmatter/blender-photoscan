@@ -1,0 +1,17 @@
+INSTRUCTIONS:
+-------------
+1)
+First, YOU NEED TO INSTALL THE VISUAL C++ REDISTRIBUTABLES (if you haven't already from some game/software).
+There are two of these (x64 and x86) - YOU NEED TO INSTALL THEM BOTH (they are provided in the same directory as this document).
+
+2)
+This addon comes in 2 versions:
+- Cuda (runs much faster, only for Nvidia GPUs)
+- Non-Cuda (still optimized in some sections but doesn't require Nvidia GPU)
+Only install the one that is compatible with your system. Install just like any other addon (drag the .zip into Blender).
+
+3)
+Restart Blender after installing.
+
+For information about how the addon works, go to the documentation:
+https://www.cgmatter.com/photoscan
